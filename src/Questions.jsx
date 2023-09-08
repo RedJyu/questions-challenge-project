@@ -1,16 +1,11 @@
 import SingleQuestion from './singleQuestion';
 function Questions({ question }) {
   return (
-    <div className='container'>
+    <section className='container'>
       {question.map((singleQuestion) => {
-        const { id, ...question } = singleQuestion;
-        return (
-          <div key={id}>
-            <SingleQuestion question={question} />
-          </div>
-        );
+        return <SingleQuestion key={singleQuestion.id} {...singleQuestion} />;
       })}
-    </div>
+    </section>
   );
 }
 export default Questions;

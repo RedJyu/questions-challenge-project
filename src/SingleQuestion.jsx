@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
-function SingleQuestion({ question }) {
+function SingleQuestion({ title, info }) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div className='question'>
       <header>
-        <h5>{question.title}</h5>
+        <h5>{title}</h5>
       </header>
-      {isVisible && <p>{question.info}</p>}
+      {isVisible && <p>{info}</p>}
       <button
         type='button'
         className='btn'
